@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Christian E. Salazar | Cloud Engineer Intern Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--ink:#14233b;--muted:#56657d;--line:#dde3ee;--navy:#0e2342;--teal:#0e8f8a;--tealsoft:#e1f4f2;--gold:#d9a441;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1424;--card:#13203a;--ink:#e9eff9;--muted:#a5b4cb;--line:#25365a;--navy:#081a35;--teal:#4cd0c9;--tealsoft:#123a47;--gold:#e6b85c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1424;--card:#13203a;--ink:#e9eff9;--muted:#a5b4cb;--line:#25365a;--navy:#081a35;--teal:#4cd0c9;--tealsoft:#123a47;--gold:#e6b85c;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif;margin:0;line-height:1.15}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.layout{display:grid;grid-template-columns:320px 1fr;min-height:100vh}
+aside{background:var(--navy);color:#eaf0fa;padding:48px 32px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;overflow-y:auto}
+.mono{width:96px;height:96px;border-radius:50%;background:var(--teal);color:#06223a;display:grid;place-items:center;font:800 34px "Plus Jakarta Sans",sans-serif;border:4px solid var(--gold);margin-bottom:22px}
+aside h1{font-size:28px;font-weight:800;color:#fff}
+aside .role{color:var(--gold);font-weight:600;margin:8px 0 4px}
+aside .loc{color:#b6c4dc;font-size:15px;margin:0 0 22px}
+.mailbtn{display:block;text-align:center;background:var(--gold);color:#1a1405;font-weight:600;text-decoration:none;padding:12px 16px;border-radius:10px;word-break:break-all;font-size:15px}
+aside nav{margin-top:30px;display:flex;flex-direction:column;gap:2px}
+aside nav a{color:#c9d6ea;text-decoration:none;padding:9px 12px;border-radius:8px;font-weight:600;font-size:15px}
+aside nav a:hover{background:rgba(255,255,255,.1);color:#fff}
+main{padding:56px clamp(24px,5vw,64px) 40px;max-width:960px}
+.intro{font:700 clamp(26px,3.6vw,38px)/1.25 "Plus Jakarta Sans",sans-serif;margin:0 0 28px;max-width:24ch}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:56px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.stat b{display:block;font:800 34px "Plus Jakarta Sans",sans-serif;color:var(--teal)}
+.stat span{color:var(--muted);font-size:15px}
+section{margin-bottom:56px}
+h2{font-size:28px;font-weight:800;margin-bottom:20px;display:flex;align-items:center;gap:14px}
+h2::after{content:"";flex:1;height:2px;background:var(--line)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+.card p{margin:0 0 14px;max-width:64ch}.card p:last-child{margin:0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card h3{font-size:19px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--tealsoft);color:var(--ink);border-radius:8px;padding:4px 12px;font-size:15px;font-weight:600}
+.proj{padding:0;overflow:hidden}
+.proj .top{background:var(--navy);color:#fff;padding:18px 24px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.proj .top h3{margin:0;font-size:22px}
+.proj .top span{color:var(--gold);font-weight:600;font-size:15px}
+.proj p{padding:20px 24px}
+.stack{display:grid;gap:16px}
+.tl{list-style:none;margin:0;padding:0 0 0 26px;border-left:3px solid var(--teal)}
+.tl li{position:relative;padding:0 0 22px 8px}.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-36px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--card);border:3px solid var(--teal)}
+.tl strong{font:700 19px "Plus Jakarta Sans",sans-serif;display:block}
+.tl span{color:var(--muted);font-size:16px}
+.contact{background:var(--navy);color:#eaf0fa;border-radius:14px;padding:32px}
+.contact h2{color:#fff}.contact h2::after{background:rgba(255,255,255,.2)}
+.contact a.m{display:inline-block;font:700 clamp(20px,3.5vw,30px) "Plus Jakarta Sans",sans-serif;color:var(--gold);word-break:break-all}
+footer{color:var(--muted);font-size:14px;margin-top:28px}
+@media (max-width:900px){.layout{grid-template-columns:1fr}aside{position:static;height:auto;padding:32px 24px}aside nav{flex-direction:row;flex-wrap:wrap;margin-top:20px}main{padding-top:36px}}
+@media (max-width:600px){.stats,.grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<div class="mono" aria-hidden="true">CS</div>
+<h1>Christian E. Salazar</h1>
+<div class="role">Aspiring Cloud Engineer Intern</div>
+<p class="loc">Silang, Cavite, Philippines</p>
+<a class="mailbtn" href="mailto:xtiansalazar17@gmail.com">xtiansalazar17@gmail.com</a>
+<nav aria-label="Sections"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#training">Certifications</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
+</aside>
+<main>
+<p class="intro">I design cloud networks and build working systems.</p>
+<div class="stats">
+<div class="stat"><b>3</b><span>Projects built, including a capstone</span></div>
+<div class="stat"><b>2</b><span>Trainings in AWS and data privacy</span></div>
+<div class="stat"><b>480</b><span>OJT hours ready to start</span></div>
+</div>
+
+<section id="about"><h2>About me</h2><div class="card">
+<p>I’m Christian Salazar, a fourth-year BS Information Technology student at STI College Dasmariñas, from Silang, Cavite. Before college I studied in the STEM strand at PCU Dasmariñas.</p>
+<p>My studies cover computer operations, networking, troubleshooting, and web and game development. I’ve built an inventory system for my capstone, a shift-scheduling web app, and a 2D arcade game. I work well with others, communicate clearly, solve problems step by step, and manage my time well. I’m always willing to learn new technologies.</p>
+</div></section>
+
+<section id="skills"><h2>Skills</h2><div class="grid">
+<div class="card"><h3>Cloud computing</h3><ul class="chips"><li>AWS VPC design</li><li>Subnetting</li><li>Architecture diagramming</li><li>AWS Pricing Calculator</li></ul></div>
+<div class="card"><h3>Web development</h3><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript basics</li></ul></div>
+<div class="card"><h3>Game development</h3><ul class="chips"><li>Gameplay scripting</li><li>Win/loss mechanics</li><li>Enemy behavior</li><li>2D level design</li></ul></div>
+<div class="card"><h3>Tools</h3><ul class="chips"><li>Word, Excel, PowerPoint</li><li>Canva</li><li>draw.io</li></ul></div>
+<div class="card"><h3>Working with others</h3><ul class="chips"><li>Communication</li><li>Problem solving</li><li>Teamwork</li><li>Time management</li></ul></div>
+</div></section>
+
+<section id="projects"><h2>Projects</h2><div class="stack">
+<article class="card proj"><div class="top"><h3>MOTOTRACK</h3><span>Capstone project</span></div><p>An inventory system with a point of sale and AI-assisted decision support.</p></article>
+<article class="card proj"><div class="top"><h3>SHIFTSYNC</h3><span>School project</span></div><p>A web-based scheduling system for employee shift swapping and real-time attendance monitoring.</p></article>
+<article class="card proj"><div class="top"><h3>COCO LOCO</h3><span>School project</span></div><p>A 2D arcade dodge game.</p></article>
+</div></section>
+
+<section id="training"><h2>Training and certifications</h2><div class="card"><ul class="tl">
+<li><strong>AWS Academy Cloud Foundations</strong><span>STI College</span></li>
+<li><strong>Information Assurance and Security (Data Privacy)</strong><span>STI College</span></li>
+</ul></div></section>
+
+<section id="education"><h2>Education</h2><div class="card"><ul class="tl">
+<li><strong>Bachelor of Science in Information Technology</strong><span>STI College Dasmariñas, expected July 2027</span></li>
+<li><strong>Senior High School, STEM Strand</strong><span>PCU Dasmariñas, 2017 to 2019</span></li>
+</ul></div></section>
+
+<section id="contact" class="contact"><h2>Contact</h2>
+<p style="margin:0 0 12px">I’m open to OJT opportunities in cloud and IT infrastructure. Email is the fastest way to reach me.</p>
+<a class="m" href="mailto:xtiansalazar17@gmail.com">xtiansalazar17@gmail.com</a>
+</section>
+<footer>© 2026 Christian E. Salazar</footer>
+</main>
+</div>
+</body>
+</html>
